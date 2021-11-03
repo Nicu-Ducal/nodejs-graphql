@@ -1,27 +1,22 @@
 {
-  "name": "nodejs-graphql",
+  "name": "project-node-2021",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
+    "start": "nodemon src/index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Nicu-Ducal/nodejs-graphql.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Nicu-Ducal/nodejs-graphql/issues"
-  },
-  "homepage": "https://github.com/Nicu-Ducal/nodejs-graphql#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "faker": "^5.5.3",
     "jsonwebtoken": "^8.5.1",
-    "node-fetch": "^3.0.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.14"
+    "node-fetch": "^2.0.0",
+    "sequelize": "^6.8.0",
+    "sqlite3": "^5.0.2"
   }
 }
