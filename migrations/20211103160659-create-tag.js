@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       slug: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
@@ -23,7 +23,7 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
-    
+
     await queryInterface.createTable('PostsTags', {
       id: {
         allowNull: false,
@@ -36,9 +36,9 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'Posts'
+            tableName: 'Posts',
           },
-          key: 'id'
+          key: 'id',
         },
       },
       tagId: {
@@ -48,7 +48,7 @@ module.exports = {
           model: {
             tableName: 'Tags'
           },
-          key: 'id'
+          key: 'id',
         }
       },
       createdAt: {
@@ -59,7 +59,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-    })
+    });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('Tags');
